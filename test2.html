@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .abc{
+            background-color: red;
+        }
+        .active{
+            background-color: blue;
+        }
+        .theP{
+            width: 100%;
+            color: green;
+        } */
+         /* .hide {
+        display: none;
+        }
+        .show {
+        display: block;
+        }
+        
+        ul li {
+        display: inline-block;
+        margin: 0 10px;
+        background-color: red;
+        } */
+        li{
+        background-color: yellow;
+        }
+        li span{
+        background-color: pink;
+        display: none;
+        }
+        .active{
+        background-color: red;
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>- click vao the Li nào thì show span con của Li đó ra</p>
+    <p>- tương tự trên nhưng hide the span cua Li khac di</p>
+    <p>- click vao Li nào đang có span hiện thi ra thi hide span do di </p>
+    <ul>
+        <li>
+            day la the Li
+            <span>day la the span</span>
+        </li>
+        <li>
+            day la the Li
+            <span>day la the span</span>
+        </li>
+        <li>
+            day la the Li
+            <span>day la the span</span>
+        </li>
+        <li>
+            day la the Li
+            <span>day la the span</span>
+        </li>
+    </ul>
+
+    <!-- <div class="demo">
+    <ul>
+      <li >tin tuc</li>
+      <li >bong da</li>
+      <li >thoi trang</li>
+    </ul>
+    <div class="content">
+      <div class="hide">
+        <img src="https://www.bing.com/th/id/OIP._lnvILusH6lkFI_oFvmLzQHaD4?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2" >
+      </div>
+      <div class="hide">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.mdMiHJCbvJndjtM1jqL5PAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" >
+      </div>
+      <div class="hide">
+        <img src="https://bazaarvietnam.vn/wp-content/uploads/2022/06/xu-huong-thoi-trang-thu-dong-2022-waist-cut-out-ho-luon.jpg" style="width: 300px; height: 200px;" >
+      </div>
+    </div>
+  </div> -->
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1V-eZ_ggCX1_0wJY3l4biv3ZVYl7M_aNuZ7xrPAplfg&s=10" style="width: 413px; height: 300px;" id="anhmain" alt="">
+    <br>
+    <img src="https://tuanluupiano.com/wp-content/uploads/2026/02/hinh-anh-chill-dep-12.jpg"  style="width: 100px; height: 100px; "alt="" >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5OrveQIX8p_zf8X3GdbkQRlABwcd391gpCj1m2kCG-A&s=10" style="width: 100px; height: 100px;" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5OrveQIX8p_zf8X3GdbkQRlABwcd391gpCj1m2kCG-A&s=10" style="width: 100px; height: 100px;" alt="">
+    <img src="https://tuanluupiano.com/wp-content/uploads/2026/02/hinh-anh-chill-dep-12.jpg"  style="width: 100px; height: 100px; "alt=""   > -->
+    <!-- <button id="btn">Click</button> -->
+    <!-- <span id="xx" class="abc"> bai 1: tạo một thẻ span !!!</span>
+    <br> -->
+    <!-- <p id="aa">Lan dau thi them va hide, lan 2 thi xoa va show</p>
+    <span id="xx" >Bai 2 </span>  -->
+    <!-- <h1 id="box">Mot so ham trong js</h1>
+    <button onclick="hamhide()">hide</button>
+    <button onclick="hamshow()">show</button>
+    <button onclick="hamAdd()">Add</button>
+    <button onclick="hamremove()">remove</button>
+    <button onclick="hamcheck()">kiemtra</button> -->
+    <!-- <p class="theP">Xin chao ngay moi bang mot nang luong tich cuc</p>
+    <button >Click</button> -->
+    <!-- <ul>
+        <li >menu1</li>
+        <li >menu1</li>
+        <li >menu1</li>
+        <li>menu1</li>
+    </ul> -->
+    <script>
+        let li=document.querySelectorAll("li")
+        let content=document.querySelectorAll("span")
+        li.forEach(function(item,index){
+            item.addEventListener("click",function(){
+                content.forEach(function(span){
+                    span.classList.remove("active")
+                })
+                    content[index].classList.add("active")
+            })
+        })
+        // let content=document.querySelectorAll(".hide")
+        // let demo=document.querySelectorAll("li")
+        // demo.forEach(function(item,index){
+        //     item.addEventListener("click",function(){
+        //         content.forEach(function(div){
+        //             div.classList.remove("show")
+        //         })
+        //         content[index].classList.add("show")
+
+        //     })
+        // })
+        // let anh=document.querySelectorAll("img")
+        // let anh1=document.getElementById("anhmain")
+        // anh.forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         let x= item.getAttribute("src")
+        //         anhmain.setAttribute("src",x)
+        //     })
+        // })
+        // let anh= document.querySelectorAll("img")
+        // anh.forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         let x= item.getAttribute("src")
+        //         alert(x)
+        //     })
+
+        // })
+        // const thebutton= document.getElementById("btn")
+        // thebutton.addEventListener("click",function(){
+        //     anh = document.getElementById("img1")
+        //     anh2= document.getElementById("img2")
+        //     x = anh.getAttribute("src")
+        //     alert(x)
+        //     y=anh2.setAttribute("src",x)
+        // })
+        // let p=document.querySelector(".theP")
+        // let element=document.querySelector("button")
+        // element.addEventListener("click",function(){
+        //     if(p.style.display === "none"){
+        //         hamshow();
+        //     }else{
+        //         hamhide();
+        //     }
+        // })
+        // bai 1
+        // let element= document.querySelector("span");
+        // element.addEventListener("click",function(){
+        //     let check=element.classList.contains("active");
+        //     if(check){
+        //         element.classList.remove("active")
+        //     } else{
+        //         element.classList.add("active")
+        //     }
+        // })
+        // let element=document.getElementById("xx")
+        // element.addEventListener("click",function(){
+        //     let check=element.classList.contains("active")
+        //     if(check){
+        //         element.classList.remove("active")
+        //         hamshow();
+        //     } else{
+        //         element.classList.add("active")
+        //         hamhide()
+        //     }
+        // })
+
+        //bai 3
+        // let element=document.querySelectorAll("li")
+        // element.forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         // item.classList.add("active")
+        //         let checkk=item.classList.contains("active")
+        //         if(checkk){
+        //             item.classList.remove("active")
+        //         } else{
+        //             item.classList.add("active")
+        //         }                
+
+        //     })
+        // })
+        // let ulll=document.getElementById("xx")
+        // ulll.addEventListener("click",function(){
+        //     let check = ulll.classList.contains("active");
+        //     if(check){
+        //         ulll.classList.remove("active")
+        //     } else{
+        //         ulll.classList.add("active")
+        //     }
+        // })
+        // let ulll1=document.getElementById("yy")
+        // ulll1.addEventListener("click",function(){
+        //     let check1 = ulll1.classList.contains("active");
+        //     if(check1){
+        //         ulll1.classList.remove("active")
+        //     } else{
+        //         ulll1.classList.add("active")
+        //     }
+        // })
+        // let ulll2=document.getElementById("zz")
+        // ulll2.addEventListener("click",function(){
+        //     let check2 = ulll2.classList.contains("active");
+        //     if(check2){
+        //         ulll2.classList.remove("active")
+        //     } else{
+        //         ulll2.classList.add("active")
+        //     }
+        // })
+        // function hamhide(){
+        //     document.querySelector(".theP").style.display = "none";
+        // }
+        // function hamshow(){
+        //     document.querySelector(".theP").style.display="block";
+        // }
+        // function hamAdd(){
+        //     document.getElementById("box").classList.add("active");
+        // }
+        // function  hamremove(){
+        //     document.getElementById("box").classList.remove("active");
+        // }
+        // function hamcheck(){
+        //     let checkClass= document.getElementById("box").classList.contains("active");
+        //     if(checkClass==true){
+        //         alert("ton tai ham")
+        //         hamshow();
+        //         hamremove();
+        //     } else{
+        //         alert("khong ton tai ham")
+        //         hamhide();
+        //         hamAdd();
+        //     }
+        // }
+        // let element=document.querySelectorAll("li");
+        // element.forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         item.style.background= "green";
+        //     })
+        // })
+    </script>
+</body>
+</html>

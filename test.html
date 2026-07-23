@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="in10(1,10)"> In cac so a -> b</button>
+    <button onclick="insole(1,10)">In cac so le tu a -> b</button>
+    <button onclick="sbhon5(1,10)"> In cac so be hon 5 tu a -> b</button>
+    <button onclick="so6(1,10)">In ra so 6</button>
+    <button onclick="tinhTong(1,10)">Tinh tong tu a->b</button>
+    <button onclick="tinhTongs(1,10)">Tinh tong theo s</button>
+    <button onclick="sln(5,12,25)">So lon nhat</button>
+    <script>
+        // 1.Kiem tra mau
+        // let color="mautrang";
+        // if (color=="mauxanh"){
+        //     console.log("Day la mau xanh");
+        // } else if( color== "maudo"){
+        //     console.log("Day la mau do");
+        // } else if( color=="mauvang"){
+        //     console.log("Day la mau vang");
+        // }else{
+        //     console.log("Cac mau khac");
+        // }
+        // 2. kiem tra nam chan le
+        // let nam=2026;
+        // if( nam % 2 == 0){
+        //     console.log("nam chan")
+        // } else{
+        //     console.log("nam le")
+        // }
+        // 3. Kiem tra nam nhuan
+        // let nam=2026
+        // if(nam % 4 ==0) {
+        //     console.log("nam nhuan")
+        // } else{
+        //     console.log("nam khong nhuan")
+        // }
+        // 4.kiem tra so chan le
+        // let sochan=1102
+        // if(sochan % 2 == 0){
+        //     if(sochan > 100){
+        //         console.log("so chan lon hon 100")
+        //     } else if (sochan < 100){
+        //         console.log("so chan be hon 100")
+        //     } else{
+        //         console.log("so chan bang 100")
+        //     }
+        // } else{
+        //     console.log("khong phai so chan")
+        // }
+        // 5. kiem tra nam the ky
+        // let nam=2102
+        // if(nam < 1900 ){
+        //     console.log("the ky 18")
+        // } else if( 1900 < nam  && nam < 1999 ){
+        //     console.log("the ky 19")
+        // } else if( 2000 < nam && nam < 2099){
+        //     console.log("the ky 20")
+        // }else{
+        //     console.log("the ky 21")
+        // }
+        // 6.danh gia snt
+        // let a=8,b=8,c=8
+        // let kq= (a+b+c)/3
+        // if( a!=1 && b!=1 && c!=1){
+        //     if( a >= 5 && b >= 5 && c >= 5){
+        //         if(kq < 7){
+        //             console.log("trung binh")
+        //         } else if( kq < 8){
+        //             console.log("kha")
+        //         } else{
+        //             console.log("gioi")
+        //         }
+        //     }else{
+        //         console.log("yeu")
+        //     }
+        // }else{
+        //     console.log("loai")
+        // }
+        // 7.in cac so 1-10
+        function in10(a,b){
+            for(let i = a ; i<=b ;i++){
+                console.log(i)
+            }
+        }
+        // 8.in cac so le tu 1-10
+        function insole(a,b){
+            for(let i = a ;i <= b ; i++){
+                if( i % 2 != 0){
+                    console.log(i)
+                }
+            }
+        }
+        // 9.in cac so lon hon 5
+        function sbhon5(a,b){
+            for(let i=a ; i<=b ;i++){
+                if( i < 5){
+                    console.log(i)
+                }
+            } 
+        }
+        // 10.in ra so 6
+        function in6(a,b){
+            for(let i=a ; i<=b ; i++){
+                if( i==6) 
+                    console.log(i)
+            }
+        }
+        // 11.tinh tong i
+        function tinhTong(a,b){
+            let kq=0
+            for(let i=a ; i<=b ; i++){
+                kq += i
+            }
+            console.log(kq)
+        }
+        // 12.tinh tong theo s
+        function tinhTongs(a,b){
+            let s=1
+            for(let i=a ; i<=b ; i++){
+                s += 1/i
+            } console.log(s)
+        }
+        
+        // 13. tim sln
+        function sln(a,b,c){
+            let kq= a > b ? (a > c ? a : c):(b > c ? b : c) 
+            console.log(kq)
+        }
+        // let a=20,b=15,c=10
+        // // if( a > b && a> c){
+        // //     console.log(a)
+        // // } else if(b>a && b>c){
+        // //     console.log(b)
+        // // } else{
+        // //     console.log(c)
+        // // // }
+        // let kq= a > b ? (a > c ? a : c):(b > c ? b : c) 
+        // console.log(kq)
+    </script>
+</body>
+</html>
