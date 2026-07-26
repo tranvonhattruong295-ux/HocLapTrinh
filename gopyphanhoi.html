@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Gop y lien he voi Znew</h1>
+        <form id="loginform" action="http://127.0.0.1:5500/Znew.html?">
+            <div>
+                <label >Ho va ten</label>
+                <input type="text" id="ten" placeholder="Ho va ten">
+                <!-- <small id="tenEr"></small> -->
+            </div>
+            <!-- <div>
+                <label >Email</label>
+                <input type="text" id="email" >
+                <small id="emailEr"></small>
+            </div>
+            <div>
+                <label >SDT</label>
+                <input type="text" id="sdt" >
+                <small id="sdtEr"></small>
+            </div>
+            <div>
+                <label >Dc</label>
+                <input type="text" id="diachi" >
+                <small id="dcEr"></small>
+            </div>
+            <div>
+                <label >tieu de</label>
+                <input type="text" id="tieude">
+                <small id="tieudeEr"></small>
+            </div>
+            <div>
+                <label >Noi dung</label>
+                <input type="text" id="noidung" >
+                <small id="noidungEr"></small>
+            </div> -->
+            <button type="submit">Gui</button>
+        
+        </form>
+        
+       
+    </div>
+    <script>
+        const form=document.getElementById("loginform")
+        const tenIn=document.getElementById("ten")
+        // const email=document.getElementById("email")
+        // const sdt=document.getElementById("sdt")
+        // const dc=document.getElementById("diachi")
+        // const td=document.getElementById("tieude")
+        // const nd=document.getElementById("noidung")
+        
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            let tenn=tenIn.value;
+            // let emaill=email.value;
+            // let sdtt=sdt.value;
+            // let dcc= dc.value;
+            // let tdd=td.value;
+            // let ndd=nd.value;
+            // || emaill ==="" || sdtt==="" || dcc === "" || tdd==="" || ndd===""
+            if (tenn === ""){
+                alert("vui long nhap day du thong tin")
+            }
+            else{
+                alert("gui phan hoi thanh cong")
+                form.submit();
+            }
+        })
+    </script>
+</body>
+</html>

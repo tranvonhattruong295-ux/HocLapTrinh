@@ -107,16 +107,19 @@
         <li>menu1</li>
     </ul> -->
     <script>
-        let li=document.querySelectorAll("li")
-        let content=document.querySelectorAll("span")
-        li.forEach(function(item,index){
-            item.addEventListener("click",function(){
-                content.forEach(function(span){
-                    span.classList.remove("active")
-                })
-                    content[index].classList.add("active")
-            })
-        })
+        // let li=document.querySelectorAll("li")
+        // let content=document.querySelectorAll("span")
+        // li.forEach(function(item,index){
+        //     item.addEventListener("click",function(){
+        //         const check=content[index].classList.contains("active")
+        //         content.forEach(function(span){
+        //             span.classList.remove("active")
+        //         })
+        //         if(!check){
+        //             content[index].classList.add("active")
+        //         }
+        //     })
+        // })
         // let content=document.querySelectorAll(".hide")
         // let demo=document.querySelectorAll("li")
         // demo.forEach(function(item,index){

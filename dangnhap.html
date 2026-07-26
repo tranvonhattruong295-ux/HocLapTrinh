@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang nhap</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vui long dang nhap de tiep tuc</h1>
+        <h2>Dang nhap</h2>
+
+
+        <form id="login-form" action="http://127.0.0.1:5500/Znew.html">
+            <div>
+                <label >Email:</label>
+                <input type="text" id="email" placeholder="Nhap email">
+                <small id="emailError"></small>
+            </div>
+            <div>
+                <label >Pass:</label>
+                <input type="text" id="pass" placeholder="Nhap pass">
+                <small id="passError"></small>
+            </div>
+
+
+            <button type="submit">Dang nhap</button>
+        </form>
+    </div>
+    <script>
+        const form= document.getElementById("login-form")
+
+        const emailIn= document.getElementById("email")
+        const passIn= document.getElementById("pass")
+
+        const emailEr= document.getElementById("emailError")
+        const passEr= document.getElementById("passError")
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+
+            let email=emailIn.value;
+            let pass=passIn.value;
+
+            emailEr.textContent=""
+            passEr.textContent=""
+            let err= false
+            if(email === ""){
+                emailEr.textContent="vui long nhap email"
+                err=true
+            } 
+            if(pass === ""){
+                passEr.textContent="vui long nhap pass"
+                err=true
+            }
+            if(err==false){
+                alert("login thanh cong")
+                form.submit();
+            }
+        })
+    </script>
+</body>
+</html>
