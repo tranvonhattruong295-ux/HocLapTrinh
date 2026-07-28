@@ -14,7 +14,16 @@
                 <input type="text" id="ten" placeholder="Ho va ten">
                 <!-- <small id="tenEr"></small> -->
             </div>
-            <!-- <div>
+            <div>
+                <label>Gioi tinh</label>
+                <select id="gioitinh">
+                    <option value=""></option>
+                    <option value="1">Nam </option>
+                    <option value="2">Nu</option>
+                    <option value="3">Khac</option>
+                </select>
+            </div>
+            <div>
                 <label >Email</label>
                 <input type="text" id="email" >
                 <small id="emailEr"></small>
@@ -38,40 +47,54 @@
                 <label >Noi dung</label>
                 <input type="text" id="noidung" >
                 <small id="noidungEr"></small>
-            </div> -->
+            </div>
+            <div>
+                <Label>Dieu khoan nguoi dung ban co dong y</Label>
+                <input type="checkbox" id="check" >
+                <small id="checkEr"></small>
+            </div>
             <button type="submit">Gui</button>
-        
+            
         </form>
         
-       
     </div>
     <script>
+
         const form=document.getElementById("loginform")
         const tenIn=document.getElementById("ten")
-        // const email=document.getElementById("email")
-        // const sdt=document.getElementById("sdt")
-        // const dc=document.getElementById("diachi")
-        // const td=document.getElementById("tieude")
-        // const nd=document.getElementById("noidung")
+        const email=document.getElementById("email")
+        const sdt=document.getElementById("sdt")
+        const dc=document.getElementById("diachi")
+        const td=document.getElementById("tieude")
+        const nd=document.getElementById("noidung")
+        const check=document.getElementById("check")
+        const gt=document.getElementById("gioitinh")
         
-
         form.addEventListener("submit", function(e){
             e.preventDefault();
 
             let tenn=tenIn.value;
-            // let emaill=email.value;
-            // let sdtt=sdt.value;
-            // let dcc= dc.value;
-            // let tdd=td.value;
-            // let ndd=nd.value;
-            // || emaill ==="" || sdtt==="" || dcc === "" || tdd==="" || ndd===""
-            if (tenn === ""){
+            let emaill=email.value;
+            let sdtt=sdt.value;
+            let dcc= dc.value;
+            let tdd=td.value;
+            let ndd=nd.value;
+            let kiemtra=check.checked;
+            let gtt=gt.value;
+
+
+            if (tenn === "" || emaill ==="" || sdtt==="" || dcc === "" || tdd==="" || ndd===""){
                 alert("vui long nhap day du thong tin")
-            }
-            else{
+            } else if (gtt === ""){
+                alert("vui long chon gioi tinh")
+            } else if( kiemtra == false){
+                alert("vui long kiem tra dieu khoan");
+            } else{
                 alert("gui phan hoi thanh cong")
                 form.submit();
             }
+
+            
         })
     </script>
 </body>

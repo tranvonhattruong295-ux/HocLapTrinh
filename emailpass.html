@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="loginform1">
+        <div>
+            <label>email</label>
+            <input type="text" id="email">
+            <small id="emailEr"></small>
+        </div>
+        <div>
+            <label>pass</label>
+            <input type="text" id="pass">
+            <small id="passEr"></small>
+        </div>
+        <button type="submit" id="but1">click</button>
+        </form>
+
+        <form id="loginform2">
+        <button type="submit" id="but2">click</button>
+        </form>
+    </div>
+    
+    <script>
+        const form1=document.getElementById("loginform1")
+        const form2=document.getElementById("loginform2")
+        
+        const email=document.getElementById("email")
+        const pass=document.getElementById("pass")
+
+        const emailEr=document.getElementById("emailEr")
+        const passEr=document.getElementById("passEr")
+        
+        let temp1=""
+        let temp2=""
+
+        emailEr.textContent=""
+        passEr.textContent=""
+
+        form1.addEventListener("submit",function(e){
+            e.preventDefault();
+
+            let emaill=email.value;
+            let passs= pass.value;
+
+            if(emaill===""){
+                emailEr.textContent="vui long nhap email"
+            }
+            if(passs===""){
+                passEr.textContent="vui long nhap pass"
+            }
+            if(emaill !== "" && passs !== ""){
+                temp1=email.value;
+                temp2=pass.value;
+                // form1.   submit();
+            }
+        })
+        form2.addEventListener("submit",function(e){
+            e.preventDefault();
+            alert(temp1);
+            alert(temp2);
+        })
+    </script>
+</body>
+</html>
