@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getLocal=localStorage.getItem("ObjectData4");
+        if(getLocal){
+            console.log(getLocal);
+            var a=JSON.parse(getLocal);
+            console.log(a);
+        } else{
+            console.log("No data found in localStorage for 'objectData4'");
+        }
+
+        var b={}
+        for(var i=11; i<21; i++){
+            b[i]=i;
+        }
+        console.log(b);
+
+        let total={
+            ...a,
+            ...b
+        }
+        console.log(total);
+        let tong=0
+        Object.values(total).map(function(value,index){
+            tong+=value;
+        })
+        console.log("Tong cac so trong total la: " + tong);
+    </script>
+</body>
+</html>

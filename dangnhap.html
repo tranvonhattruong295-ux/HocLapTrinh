@@ -57,6 +57,13 @@
                 form.submit();
             }
         })
+
+        var getLocalStorage = localStorage.getItem("baovic");
+        if(getLocalStorage) {
+            console.log(getLocalStorage);
+            var a = JSON.parse(getLocalStorage);
+            console.log(a);
+        }
     </script>
 </body>
 </html>

@@ -107,6 +107,33 @@
         <li>menu1</li>
     </ul> -->
     <script>
+        var demo={}
+        var demo2={
+            father:"cha",
+            chile: "con"
+        }
+        var mang1=[]
+        demo['txt']="hello world"
+        demo.txt1="hello world 1"
+        console.log(Object.keys(demo))
+        console.log(demo['txt'])
+        demo['abc']=demo2
+        console.log(demo)  
+        
+        for(var i=0; i<11; i++){
+            if(i<5){
+            mang1.push(i)    
+            }
+        }
+        console.log(mang1)
+        demo2['xyz']=mang1
+        console.log(demo2)
+
+        object.keys(demo2).map(function(value,key){
+            console.log(key)
+        })
+
+        
         // let li=document.querySelectorAll("li")
         // let content=document.querySelectorAll("span")
         // li.forEach(function(item,index){

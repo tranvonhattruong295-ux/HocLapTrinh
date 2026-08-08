@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var b=[];
+        // var getLocal = localStorage.getItem("baovic");
+        // if(getLocal){
+        //     console.log(getLocal);
+        //     var a = JSON.parse(getLocal);
+        //     console.log(a);
+        // }
+        // a.map(function(value,key){
+        //     if(key===9){
+        //         console.log(value);
+        //     }
+        // })
+        // // a.map(function(value,key){
+        // //     if(value <= 5){
+        // //         b.push(value);
+        // //     }
+        // // })
+        // function checkAdult(value){
+        //     return value <= 5;
+        // }
+        // const temp= a.filter(checkAdult);
+        // console.log(temp);
+
+        // let demo=JSON.stringify(temp);
+        // localStorage.setItem("baovic1",demo);
+        
+        var getLocal= localStorage.getItem("objectData2");
+        if(getLocal){
+            console.log(getLocal);
+            var a= JSON.parse(getLocal);
+            console.log(a);
+        }
+        Object.values(a).map(function(value,index){
+            console.log(value);
+        })
+        Object.keys(a).map(function(key,index){
+            // console.log(key);
+            delete a["data"];
+            console.log(a);
+        })
+        let demo=JSON.stringify(a);
+        localStorage.setItem("objectData3",demo);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var a=[];
+        // for (var i=0; i<11; i++) {
+        //     a.push(i);
+        // }
+
+        // console.log(a);
+        // let demo=JSON.stringify(a);
+        // console.log(demo);
+        // localStorage.setItem("baovic",demo);
+        
+        var getLocal = localStorage.getItem("objectData");
+        if(getLocal){
+            console.log(getLocal);
+            var a= JSON.parse(getLocal);
+            console.log(a);
+        }
+
+        Object.values(a).map(function(value,index){
+            console.log(value);
+        })
+        Object.keys(a).map(function(key,index){
+            console.log(key);
+        })
+        
+        var b={
+            sdt:"0123456789",
+        }
+
+        a["data2"]=b;
+        console.log(a);
+
+        var demo=JSON.stringify(a);
+        localStorage.setItem("objectData2",demo);
+    </script>
+</body>
+</html>
